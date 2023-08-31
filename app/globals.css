@@ -1,0 +1,117 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    --background: #f6f8ff;
+    --foreground: 222.2 84% 4.9%;
+
+    --card: 0 0% 100%;
+    --card-foreground: 222.2 84% 4.9%;
+
+    --primary: #0079ff;
+    --primary-hover: #60abff;
+    --txt-high-contrast: #2b3442;
+    --txt-mid-contrast: #4b6a9b;
+    --txt-low-contrast: #697c9a;
+    --txt-search: #222731;
+    --txt-search-placeholder: #4b6a9b;
+    --bg: #f6f8ff;
+    --bg-secondary: #fefefe;
+    --theme-switch-btn-hover: #222731;
+    --error: #f74646;
+
+    --popover: 0 0% 100%;
+    --popover-foreground: 222.2 84% 4.9%;
+
+    --primary: 222.2 47.4% 11.2%;
+    --primary-foreground: 210 40% 98%;
+
+    --secondary: 210 40% 96.1%;
+    --secondary-foreground: 222.2 47.4% 11.2%;
+
+    --muted: 210 40% 96.1%;
+    --muted-foreground: 215.4 16.3% 46.9%;
+
+    --accent: 210 40% 96.1%;
+    --accent-foreground: 222.2 47.4% 11.2%;
+
+    --destructive: 0 84.2% 60.2%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 214.3 31.8% 91.4%;
+    --input: 214.3 31.8% 91.4%;
+    --ring: 222.2 84% 4.9%;
+
+    --radius: 0.5rem;
+  }
+
+  .dark {
+    --background: #141d2f;
+    --foreground: 210 40% 98%;
+    --background-secondary: #1e2a47;
+    --card: 222.2 84% 4.9%;
+    --card-foreground: 210 40% 98%;
+
+    --primary-hover: #60abff;
+    --txt-high-contrast: #fff;
+    --txt-mid-contrast: #ffff;
+    --txt-low-contrast: #fff;
+    --txt-search: #fff;
+    --txt-search-placeholder: #fff;
+    --bg: #141d2f;
+    --bg-secondary: #1e2a47;
+    --theme-switch-btn-hover: #90a4d4;
+    --error: #f74646;
+
+    --popover: 222.2 84% 4.9%;
+    --popover-foreground: 210 40% 98%;
+
+    --primary: 210 40% 98%;
+    --primary-foreground: 222.2 47.4% 11.2%;
+
+    --secondary: 217.2 32.6% 17.5%;
+    --secondary-foreground: 210 40% 98%;
+
+    --muted: 217.2 32.6% 17.5%;
+    --muted-foreground: 215 20.2% 65.1%;
+
+    --accent: 217.2 32.6% 17.5%;
+    --accent-foreground: 210 40% 98%;
+
+    --destructive: 0 62.8% 30.6%;
+    --destructive-foreground: 210 40% 98%;
+
+    --border: 217.2 32.6% 17.5%;
+    --input: 217.2 32.6% 17.5%;
+    --ring: 212.7 26.8% 83.9%;
+  }
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background;
+  }
+  img {
+    @apply max-w-[150px];
+  }
+}
+
+/* Set a default background color for the system theme */
+/* Override system background color if light or dark theme is selected */
+[data-theme="light"] {
+  --system-background: var(#f6f8ff);
+}
+
+[data-theme="dark"] {
+  --system-background: var(#141d2f);
+}
+
+::selection {
+  background-color: #f74646;
+  color: #fff;
+}
